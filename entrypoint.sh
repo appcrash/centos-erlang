@@ -17,5 +17,5 @@ TARGZ=$(find _build -name *.tar.gz)
 for f in $TARGZ; do
   newf=$(echo $f | sed -E "s/(.+)\.tar\.gz/\1-el$OS_VER.tar.gz/g")
   echo "Rename $f => $newf"
-  mv $f $newf"
+  mv $f $newf
 done
