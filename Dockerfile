@@ -18,7 +18,5 @@ RUN curl -sSL $REBAR3_URL -o /usr/local/bin/rebar3 && \
     chmod a+x /usr/local/bin/rebar3
 
 
-COPY entrypoint.sh /entrypoint.sh
 
-
-ENTRYPOINT ["/entrypoint.sh"]
+CMD ["erl]

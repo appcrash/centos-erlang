@@ -1,10 +1,5 @@
 #!/bin/bash
 
-if [ -z "$REBAR3_ARG" ]; then
-  echo "REBAR3_ARGS is not set"
-  exit 1
-fi
-rebar3 $REBAR3_ARG
 
 # rename artifacts based on os version
 if [ -z "$OS_VER" ]; then
