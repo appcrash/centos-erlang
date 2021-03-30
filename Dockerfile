@@ -18,5 +18,5 @@ RUN curl -sSL $REBAR3_URL -o /usr/local/bin/rebar3 && \
     chmod a+x /usr/local/bin/rebar3
 
 
-
-CMD ["erl]
+COPY rename_release.sh /rename_release.sh
+CMD ["erl"]
