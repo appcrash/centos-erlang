@@ -1,4 +1,4 @@
-ARG OS_VER=7
+ARG OS_VER=8
 FROM centos:$OS_VER
 
 ARG RPM_URL=https://github.com/rabbitmq/erlang-rpm/releases/download/v23.3/erlang-23.3-2.el
