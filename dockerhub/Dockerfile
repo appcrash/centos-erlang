@@ -3,7 +3,7 @@ FROM centos:$OS_VER
 
 ARG RPM_URL=https://github.com/rabbitmq/erlang-rpm/releases/download/v23.3/erlang-23.3-2.el
 ARG REBAR3_VER=3.14.4
-ARG OS_VER=7
+ARG OS_VER=8
 
 ENV OS_VER $OS_VER
 ENV ERL_RPM_URL ${RPM_URL}${OS_VER}.x86_64.rpm
