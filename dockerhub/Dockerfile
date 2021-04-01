@@ -7,7 +7,10 @@ ENV ERL_RPM_URL https://packages.erlang-solutions.com/erlang/rpm/centos/7/x86_64
 ENV REBAR3_URL https://github.com/erlang/rebar3/releases/download/$REBAR3_VER/rebar3
 
 
-RUN yum group install -y "Development Tools"
+RUN yum update -y && \
+    yum group install -y "Development Tools" \
+    yum install -y unixODBC
+
 RUN curl -sSL $ERL_RPM_URL -o erlang.rpm && \
     rpm -i erlang.rpm && \
     rm erlang.rpm
