@@ -10,6 +10,7 @@ ENV ERL_RPM_URL ${RPM_URL}${OS_VER}.x86_64.rpm
 ENV REBAR3_URL https://github.com/erlang/rebar3/releases/download/$REBAR3_VER/rebar3
 
 
+RUN yum group install -y "Development Tools"
 RUN echo $ERL_RPM_URL && curl -sSL $ERL_RPM_URL -o erlang.rpm && \
     rpm -i erlang.rpm && \
     rm erlang.rpm
