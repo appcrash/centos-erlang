@@ -8,7 +8,7 @@ ENV REBAR3_URL https://github.com/erlang/rebar3/releases/download/$REBAR3_VER/re
 
 
 RUN yum update -y && \
-    yum group install -y "Development Tools" \
+    yum group install -y "Development Tools" && \
     yum install -y unixODBC
 
 RUN curl -sSL $ERL_RPM_URL -o erlang.rpm && \
