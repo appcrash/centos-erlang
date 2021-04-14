@@ -8,7 +8,7 @@ ENV REBAR3_URL https://github.com/erlang/rebar3/releases/download/$REBAR3_VER/re
 
 RUN dnf install -y epel-release && \
     dnf update -y && \
-    dnf install -y unixODBC libglvnd-glx mesa-libGLU wxGTK3 wxGTK3-gl && \
+    dnf install -y unixODBC cmake libglvnd-glx mesa-libGLU wxGTK3 wxGTK3-gl && \
     dnf group install -y "Development Tools"
 
 RUN echo $ERL_RPM_URL && curl -sSL $ERL_RPM_URL -o erlang.rpm && \
